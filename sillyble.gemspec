@@ -6,10 +6,10 @@ require 'sillyble/version'
 Gem::Specification.new do |spec|
   spec.name          = "sillyble"
   spec.version       = Sillyble::VERSION
-  spec.authors       = ["jessicard"]
-  spec.email         = ["jessicard@mac.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ["jessicard, colinpilloud"]
+  spec.email         = ["jessicard@mac.com, colin.pilloud@gmail.com"]
+  spec.summary       = %q{Provides syllable counts and letters.}
+  # spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

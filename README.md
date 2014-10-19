@@ -1,6 +1,6 @@
 # Sillyble
 
-TODO: Write a gem description
+Provides syllable counts and letters.
 
 ## Installation
 
