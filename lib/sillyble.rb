@@ -1,5 +1,5 @@
 require "sillyble/version"
+require 'sillyble/syllable'
 
 module Sillyble
-  # Your code goes here...
 end
