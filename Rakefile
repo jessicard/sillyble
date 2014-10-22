@@ -10,21 +10,24 @@ task :populate_dict do
 
   File.open("words.txt", "r") do |file_handle|
     file_handle.each_line do |word|
-      work_queue.push word
+      work_queue.push word.chomp
     end
   end
 
-  workers = (0...4).map do
-    Thread.new do
-      begin
+  File.open("dict.txt", "w") do |file_handle|
+    workers = (0...4).map do
+      Thread.new do
         while word = work_queue.pop(true)
-          page = Nokogiri::HTML(open("http://www.merriam-webster.com/dictionary/#{word}"))
-          puts page.css("#headword h2").first.text.gsub(/\d/, "")
+          begin
+            page = Nokogiri::HTML(open("http://www.howmanysyllables.com/words/#{word}"))
+            syllables = page.css("#SyllableContainer_ResultFormatting")[1].text.gsub("\w", "")
+            string = "#{word}: #{syllables}"
+            file_handle.puts string
+          rescue
+          end
         end
-      rescue
-        puts "failed on #{word}"
       end
     end
+    workers.map(&:join)
   end
-  workers.map(&:join)
 end
