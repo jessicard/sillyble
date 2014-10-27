@@ -5,7 +5,7 @@ module Sillyble
   class Syllable
     @@syllable_map = Hash.new
 
-    Zlib::GzipReader.open("dict.tar.gz") do |gz|
+    Zlib::GzipReader.open(File.expand_path("../dict.tar.gz", __FILE__)) do |gz|
       dict = gz.read
       dict.split("\n").each do |line|
         dict_def = line.split(": ")
