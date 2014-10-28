@@ -215,7 +215,7 @@ coarse
 coast
 coat
 cock
-coda
+code
 cold
 colt
 comb
@@ -247,7 +247,6 @@ cross
 crow
 crowd
 crown
-cruel
 crush
 crust
 cry
@@ -307,7 +306,6 @@ draft
 drag
 drank
 draw
-drawer
 dream
 dress
 drift
@@ -598,7 +596,6 @@ jail
 jar
 jest
 jew
-jewel
 job
 join
 joint
@@ -860,7 +857,6 @@ pound
 pour
 praise
 pray
-prayer
 preach
 press
 prey
@@ -901,7 +897,6 @@ raw
 ray
 reach
 read
-real
 realm
 rear
 red
